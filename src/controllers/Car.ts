@@ -6,6 +6,7 @@ class CarController {
   constructor(private _service: IService<ICar>) {
     this.create = this.create.bind(this);
     this.read = this.read.bind(this);
+    this.readOne = this.readOne.bind(this);
   }
 
   public async create(req: Request, res: Response, next: NextFunction) {
@@ -21,6 +22,15 @@ class CarController {
     try {
       const cars = await this._service.read();
       return res.status(200).json(cars);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  public async readOne(req: Request, res: Response, next: NextFunction) {
+    try {
+      const car = await this._service.readOne(req.params.id);
+      return res.status(200).json(car);
     } catch (error) {
       next(error);
     }

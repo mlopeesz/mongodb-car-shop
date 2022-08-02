@@ -11,5 +11,6 @@ const carController = new CarController(carService);
 
 route.post('/', carController.create);
 route.get('/', carController.read);
+route.get('/:id', carController.readOne);
 
 export default route;
