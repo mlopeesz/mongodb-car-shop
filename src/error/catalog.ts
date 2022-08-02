@@ -4,8 +4,8 @@ export enum ErrorTypes {
 }
 
 type ObjectErrorResponse = {
-  error: string,
-  httpStatus: number
+  httpStatus: number,
+  message: string,
 };
 
 export type ErrorCatalog = {
@@ -14,11 +14,11 @@ export type ErrorCatalog = {
 
 export const errorCatalog: ErrorCatalog = {
   InvalidMongoId: {
-    error: 'Id must have 24 hexadecimal characters',
     httpStatus: 400,
+    message: 'Id must have 24 hexadecimal characters',
   },
   NotFound: {
-    error: 'Object not found',
     httpStatus: 404,
+    message: 'Object not found',
   },
 };
