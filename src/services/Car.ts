@@ -29,6 +29,12 @@ class CarService implements IService<ICar> {
     if (!car) throw new Error(ErrorTypes.NotFound);
     return car;
   }
+
+  public async delete(_id: string) {
+    const car = await this._model.delete(_id);
+    if (!car) throw new Error(ErrorTypes.NotFound);
+    return car;
+  }
 }
 
 export default CarService;

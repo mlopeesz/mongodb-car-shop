@@ -7,6 +7,7 @@ class CarController {
     this.create = this.create.bind(this);
     this.read = this.read.bind(this);
     this.readOne = this.readOne.bind(this);
+    this.delete = this.delete.bind(this);
   }
 
   public async create(req: Request, res: Response, next: NextFunction) {
@@ -31,6 +32,15 @@ class CarController {
     try {
       const car = await this._service.readOne(req.params.id);
       return res.status(200).json(car);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  public async delete(req: Request, res: Response, next: NextFunction) {
+    try {
+      const car = await this._service.delete(req.params.id);
+      return res.status(204).json(car);
     } catch (error) {
       next(error);
     }

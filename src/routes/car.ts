@@ -12,5 +12,6 @@ const carController = new CarController(carService);
 route.post('/', carController.create);
 route.get('/', carController.read);
 route.get('/:id', carController.readOne);
+route.delete('/:id', carController.delete);
 
 export default route;
