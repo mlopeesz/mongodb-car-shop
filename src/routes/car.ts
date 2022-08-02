@@ -5,10 +5,11 @@ import CarService from '../services/Car';
 
 const route = Router();
 
-const car = new CarModel();
-const carService = new CarService(car);
+const carModel = new CarModel();
+const carService = new CarService(carModel);
 const carController = new CarController(carService);
 
-route.get('/cars', carController.read);
+route.post('/', carController.create);
+route.get('/', carController.read);
 
 export default route;
