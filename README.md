@@ -1,16 +1,23 @@
-# 🚧 README em construção 🚧
+# Car Shop
+Para este projeto, apliquei os princípios de Programação Orientada a Objetos (POO) para a construção de uma API com CRUD para gerenciar uma concessionária de veículos. Isso será feito utilizando o banco de dados MongoDB.
 
-<!-- Olá, Tryber!
+---
+## Tecnologias utilizadas
+- TypeScript
+- node.js
+- MSC
+- Mongoose
+- MongoDB
+- express
+- joi
+- zod
+- Sequelize
+- RESTful
+- mocha
+- chai
+- sinon
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
 
-É essencial que você preencha esse documento por conta própria, ok?
-
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
-
--->
+---
+## Instalação
+Para testar a aplicação basta clonar o repositório e instalar as dependências com o ```npm install``` e executar o script ```npm run dev``` para subir a API. Não esqueça de configurar suas variáveis de ambiente no arquivo ```.env```.
